@@ -1,3 +1,6 @@
+import router from './router'
+import { resolve } from 'path'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -13,16 +16,30 @@ export default {
     ]
   },
 
+  // 配置别名
+  alias: {
+    'images': resolve(__dirname, './assets/images'),
+    'style': resolve(__dirname, './assets/style'),
+    'pages': resolve(__dirname, './pages/')
+  },
+
+  server: {
+    port: 8000 // default: 3000
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
 
-  router: {
-    middleware: 'auth'
-  },
-
+  router,
+  
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/router',
+    {
+      src: '~/plugins/axios',
+      ssr: true // 开启服务端渲染
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,7 +60,16 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true // 开启跨域
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'localhost:8080', // 代理转发的地址
+      pathRewrite: {'^/api/': ''}
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

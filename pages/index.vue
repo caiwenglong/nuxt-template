@@ -1,5 +1,5 @@
 <template>
-  <div>{{a}} ---- {{b}}</div>
+  <div>12</div>
 </template>
 
 <script>
@@ -26,12 +26,10 @@ export default {
    * 读取数据，将数据返回给组件的data
    * 返回的数据会跟组件的data进行合并
    */
-  asyncData(context) {
-    console.log('asyncData');
-    
-    return {
-      b: 2
-    }
+  async asyncData({ $axios }) {
+    // 注意：静态资源底下的文件在获取时路径不用加static
+    const ip = await $axios({url: '/mock-data.json'})
+    console.log(ip);
     
   },
 
@@ -44,9 +42,9 @@ export default {
   /**
    * 读取数据，将数据返回给vuex
    */
-  fetch({store}) {
+  fetch({store, getters}) {
     console.log('fetch');
-    
+    store.dispatch('A_UPDATE_DATA', {err: 0, data: {title: 123}})
   },
 
   /**
@@ -90,6 +88,11 @@ export default {
   destroyed() {
     console.log('destroyed');
     
+  },
+
+  beforeRouteLeave(to, from, next) {
+    console.log('离开');
+    next()
   }
 }
 </script>
