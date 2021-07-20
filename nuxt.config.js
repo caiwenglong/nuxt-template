@@ -29,6 +29,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    './assets/scss/index.scss',
+    'element-ui/lib/theme-chalk/index.css'
   ],
 
   router,
@@ -39,7 +41,13 @@ export default {
     {
       src: '~/plugins/axios',
       ssr: true // 开启服务端渲染
-    }
+    },
+    {
+      src: '~/plugins/element-ui',
+      ssr: true,
+      // mode: 'server' // or client // v2.4+
+    },
+    '~/plugins/mixins'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,7 +56,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module',
+    "@nuxt/components"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,6 +66,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'cookie-universal-nuxt',
+    '@nuxtjs/style-resources'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -80,5 +91,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [/^element-ui/]
   }
 }
