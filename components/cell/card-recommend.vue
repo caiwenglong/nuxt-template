@@ -4,7 +4,10 @@
       class="cell-card__item-wrap vivify ball"
       shadow="hover"
     >
-      <div class="item">
+      <div
+        class="item"
+        @click="handleRedirectToDetail()"
+      >
         <div class="item__img">
           <a href="">
             <img
@@ -38,6 +41,11 @@
 <script>
 export default {
 
+  methods: {
+    handleRedirectToDetail () {
+      this.$router.push({ name: 'articles-id', params: {id: 1}})
+    }
+  }
 }
 </script>
 
