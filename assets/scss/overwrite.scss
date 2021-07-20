@@ -1,0 +1,22 @@
+body {
+  .el-header,
+  .el-main,
+  .el-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .el-menu {
+    border-bottom: solid 1px #e6e6e6;
+    background: transparent;
+    border: none;
+  }
+
+  .el-card__body {
+    padding: 0px;
+  }
+
+  .el-row {
+    margin: 0 !important;
+  }
+}

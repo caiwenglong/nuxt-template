@@ -1,5 +1,4 @@
+@import 'variable.scss';
 @import 'global.scss';
-
-div {
-  background: red
-}
+@import '../fonts/fonts.scss';
+@import 'overwrite.scss'

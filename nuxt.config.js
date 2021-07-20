@@ -20,6 +20,7 @@ export default {
   alias: {
     'images': resolve(__dirname, './assets/images'),
     'style': resolve(__dirname, './assets/style'),
+    'com': resolve(__dirname, './components/'),
     'pages': resolve(__dirname, './pages/')
   },
 
@@ -29,6 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    './assets/css/vivify.min.css',
     './assets/scss/index.scss',
     'element-ui/lib/theme-chalk/index.css'
   ],

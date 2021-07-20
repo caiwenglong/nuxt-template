@@ -1,100 +1,107 @@
 <template>
-  <div>
-    12
+  <div class="page-home">
+    <div class="page-home-banner">
+      <PartBanner></PartBanner>
+      <PartListCardFeature></PartListCardFeature>
+    </div>
+    <div class="page-row product-recommend">
+      <CellRowTitle></CellRowTitle>
+      <PartListCardRecommend></PartListCardRecommend>
+    </div>
+    <div class="page-row">
+      <CellWaves></CellWaves>
+    </div>
   </div>
 </template>
 
 <script>
+import PartBanner from 'com/part/banner.vue'
+import PartListCardFeature from 'com/part/list-card-feature.vue'
+import PartListCardRecommend from 'com/part/list-card-recommend.vue'
+import CellWaves from 'com/cell/waves.vue'
+import CellRowTitle from 'com/cell/row-title.vue'
+
 export default {
-  middleware(context) {
-    // 这个是页面级别的 middleware
-    // console.log(context);
-    console.log('middleware page');
-    
-  },
-
-  // 做动态路由参数的校验
-  validate({ params, query, store }) {
-    // 校验业务
-    console.log('validate');
-
-    // 这边返回值为true 或者 false， 
-    // 如果是false 那么页面就会出现报错信息
-    return true
-    
-  },
-
-  /**
-   * 读取数据，将数据返回给组件的data
-   * 返回的数据会跟组件的data进行合并
-   */
-  async asyncData({ $axios }) {
-    // 注意：静态资源底下的文件在获取时路径不用加static
-    const ip = await $axios({url: '/mock-data.json'})
-    console.log(ip);
-    
-  },
-
-  data() {
-    return {
-      a: 1
-    }
-  },
-
-  /**
-   * 读取数据，将数据返回给vuex
-   */
-  fetch({store, getters}) {
-    console.log('fetch');
-    store.dispatch('A_UPDATE_DATA', {err: 0, data: {title: 123}})
-  },
-
-  /**
-   * beforeCreate 和created 会在客户端跟服务器端同时执行
-   * 下面的打印信息会在服务器端和客户端的控制台中打印出来
-   * 但是这边不能拿到context 和 window
-   */
-  beforeCreate() {
-    console.log('beforeCreate');
-    
-  },
-  created() {
-    console.log('created');
-    
-    
-  },
-
-  beforeMount() {
-    console.log('beforeMount');
-    
-  },
-
-  mounted() {
-    console.log('mounted');
-    
-  },
-  beforeUpdate() {
-    console.log('beforeUpdate');
-    
-  },
-
-  updated() {
-    console.log('updated');
-    
-  },
-  
-  beforeDestroy() {
-    console.log('beforeDestroy');
-    
-  },
-  destroyed() {
-    console.log('destroyed');
-    
-  },
-
-  beforeRouteLeave(to, from, next) {
-    console.log('离开');
-    next()
+  components: {
+    PartBanner,
+    PartListCardFeature,
+    PartListCardRecommend,
+    CellWaves,
+    CellRowTitle
   }
 }
 </script>
+
+
+<style lang="scss">
+.page-home {
+  position: relative;
+}
+.page-home-banner {
+  position: relative;
+  min-height: 650px;
+}
+
+.product-recommend {
+  padding-top: 120px;
+  background-color: #f5f5f5;
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+</style>
