@@ -1,14 +1,19 @@
 body {
   margin: 0;
-  font-family: 'c3';
-  background: #2193b0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #fff, #d5eaff52, #d5eaff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #fff, #d5eaff52, #d5eaff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'comLight';
+  background: #2193b0;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fff, #d5eaff52, #d5eaff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fff, #d5eaff52, #d5eaff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
 * {
   box-sizing: border-box;
 }
+
 .page-row {
   margin-top: 20px;
 }
@@ -20,6 +25,8 @@ background: linear-gradient(to bottom, #fff, #d5eaff52, #d5eaff); /* W3C, IE 10+
   display: block;
   clear: both;
 }
-.clearfix { /*兼容 IE*/
+
+.clearfix {
+  /*兼容 IE*/
   zoom: 1;
 }

@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.part-breadcrumb {
+  font-size: 16px;
+}
 </style>
