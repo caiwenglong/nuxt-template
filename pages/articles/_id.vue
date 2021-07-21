@@ -6,19 +6,14 @@
     <div class="article-title">
       <h2>干货｜如何快速上手设计出简单好看Logo？</h2>
       <div class="article-info">
-        <ul>
-          <li>
-            <span class="text">
-              <svg-icon icon-class="eye" />
-            </span>
-            <span class="value">yntry</span>
-          </li>
-          <li>
-            <span></span>
-          </li>
-          <li></li>
-          <li></li>
-        </ul>
+        <div class="el-row">
+          <div class="el-col">
+            <CellLottieValue :options="avatarOptions" :value="'123123'"></CellLottieValue>
+            <CellLottieValue :options="eyeOptions" :value="'123123'"></CellLottieValue>
+            <CellLottieValue :options="starOptions" :value="'123123'"></CellLottieValue>
+            <CellLottieValue :options="scoreOptions" :value="'123123'"></CellLottieValue>
+          </div>
+        </div>
       </div>
     </div>
     <div class="article-content">
@@ -37,15 +32,31 @@
 
 <script>
 import PartBreadcrumb from 'com/part/breadcrumb.vue'
+import CellLottieValue from 'com/cell/lottie-value.vue'
+import * as loEye from 'assets/animation/eye.json'
+import * as loAvatar from 'assets/animation/avatar.json'
+import * as loStar from 'assets/animation/star.json'
+import * as loScore from 'assets/animation/coins.json'
+
 
 export default {
   components: {
     PartBreadcrumb,
+    CellLottieValue
   },
 
   asyncData ({ params }) {
     return {
-      id: params.id
+      id: params.id,
+    }
+  },
+
+  data () {
+    return {
+      eyeOptions: { animationData: loEye },
+      avatarOptions: { animationData: loAvatar },
+      starOptions: { animationData: loStar },
+      scoreOptions: { animationData: loScore },
     }
   }
 
@@ -67,6 +78,7 @@ export default {
 }
 
 .article-content {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 2;
 }
 </style>

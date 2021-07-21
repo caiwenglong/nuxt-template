@@ -8,9 +8,6 @@
       <CellRowTitle></CellRowTitle>
       <PartListCardRecommend></PartListCardRecommend>
     </div>
-    <div class="page-row">
-      <CellWaves></CellWaves>
-    </div>
   </div>
 </template>
 
@@ -18,7 +15,6 @@
 import PartBanner from 'com/part/banner.vue'
 import PartListCardFeature from 'com/part/list-card-feature.vue'
 import PartListCardRecommend from 'com/part/list-card-recommend.vue'
-import CellWaves from 'com/cell/waves.vue'
 import CellRowTitle from 'com/cell/row-title.vue'
 
 export default {
@@ -26,7 +22,6 @@ export default {
     PartBanner,
     PartListCardFeature,
     PartListCardRecommend,
-    CellWaves,
     CellRowTitle
   }
 }

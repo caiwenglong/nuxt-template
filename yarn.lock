@@ -5715,6 +5715,11 @@ lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+lottie-web@^5.1.9:
+  version "5.7.12"
+  resolved "https://registry.nlark.com/lottie-web/download/lottie-web-5.7.12.tgz#59771aeec72e6748e6009d0384fce19e07943243"
+  integrity sha1-WXca7scuZ0jmAJ0DhPzhngeUMkM=
+
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
@@ -9539,6 +9544,13 @@ vue-loader@^15.9.7:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-lottie@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npm.taobao.org/vue-lottie/download/vue-lottie-0.2.1.tgz#f9f62c34a276e6834255406118fb05b51f765e4b"
+  integrity sha1-+fYsNKJ25oNCVUBhGPsFtR92Xks=
+  dependencies:
+    lottie-web "^5.1.9"
 
 vue-meta@^2.4.0:
   version "2.4.0"

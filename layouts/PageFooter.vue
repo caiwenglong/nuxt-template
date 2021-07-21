@@ -1,11 +1,14 @@
 <template>
   <div class="page-footer">
-    <cell-icon-link></cell-icon-link>
+    <div class="page-row">
+      <cell-icon-link></cell-icon-link>
+    </div>
   </div>
 </template>
 
 <script>
 import CellIconLink from 'com/cell/icon-link.vue'
+
 export default {
   components: {
     CellIconLink

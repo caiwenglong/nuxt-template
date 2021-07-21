@@ -13,13 +13,12 @@ export default {
 
   mounted () {
     const btnCycles = document.querySelectorAll('.btn-cycle > div')
-    console.log(btnCycles)
     btnCycles.forEach((btn) => {
       btn.addEventListener('mousemove', (e) => {
-        let size = parseInt(getComputedStyle(btn).width)
+        const size = parseInt(getComputedStyle(btn).width)
         // scaling
-        let x = size * 0.3 * 0.7 + 0.7 * e.offsetX
-        let y = size * 0.3 * 0.7 + 0.7 * e.offsetY
+        const x = size * 0.3 * 0.7 + 0.7 * e.offsetX
+        const y = size * 0.3 * 0.7 + 0.7 * e.offsetY
         btn.style.setProperty('--x', x)
         btn.style.setProperty('--y', y)
         btn.style.setProperty('--size', size)
