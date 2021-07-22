@@ -8,6 +8,9 @@
       <CellRowTitle></CellRowTitle>
       <PartListCardRecommend></PartListCardRecommend>
     </div>
+    <div class="page-row">
+      <PartListCardImgOutstanding></PartListCardImgOutstanding>
+    </div>
   </div>
 </template>
 
@@ -16,13 +19,15 @@ import PartBanner from 'com/part/banner.vue'
 import PartListCardFeature from 'com/part/list-card-feature.vue'
 import PartListCardRecommend from 'com/part/list-card-recommend.vue'
 import CellRowTitle from 'com/cell/row-title.vue'
+import PartListCardImgOutstanding from 'com/part/list-card-img-outstanding.vue'
 
 export default {
   components: {
     PartBanner,
     PartListCardFeature,
     PartListCardRecommend,
-    CellRowTitle
+    CellRowTitle,
+    PartListCardImgOutstanding
   }
 }
 </script>

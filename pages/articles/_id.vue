@@ -27,6 +27,10 @@
       撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发
       撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发撒旦发射点发
     </div>
+    <div class="page-row">
+      <comment-editor></comment-editor>
+      <CellFeedBackRate></CellFeedBackRate>
+    </div>
   </div>
 </template>
 
@@ -38,11 +42,14 @@ import * as loAvatar from 'assets/animation/avatar.json'
 import * as loStar from 'assets/animation/star.json'
 import * as loScore from 'assets/animation/coins.json'
 
+import CellFeedBackRate from 'com/cell/feedback-rate.vue'
+
 
 export default {
   components: {
     PartBreadcrumb,
-    CellLottieValue
+    CellLottieValue,
+    CellFeedBackRate
   },
 
   asyncData ({ params }) {

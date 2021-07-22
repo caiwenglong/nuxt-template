@@ -2841,6 +2841,11 @@ commander@^6.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
   integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
 
+comment-message-editor@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.nlark.com/comment-message-editor/download/comment-message-editor-1.0.1.tgz#000b18490eba25a4009881fa6896cac2cd67e597"
+  integrity sha1-AAsYSQ66JaQAmIH6aJbKws1n5Zc=
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"

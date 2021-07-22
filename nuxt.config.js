@@ -53,7 +53,11 @@ export default {
       // mode: 'server' // or client // v2.4+
     },
     '~/plugins/mixins',
-    '~/plugins/svg-icon'
+    '~/plugins/svg-icon',
+    {
+      src: '~/plugins/no-ssr',
+      ssr: false
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
