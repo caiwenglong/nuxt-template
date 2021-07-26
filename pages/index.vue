@@ -15,6 +15,9 @@
       <CellRowTitle></CellRowTitle>
       <PartListCardRecommend></PartListCardRecommend>
     </div>
+    <div class="page-row">
+      <CellInputDel></CellInputDel>
+    </div>
   </div>
 </template>
 
@@ -24,8 +27,9 @@ import PartListCardFeature from 'com/part/list-card-feature.vue'
 import PartListCardRecommend from 'com/part/list-card-recommend.vue'
 import CellRowTitle from 'com/cell/row-title.vue'
 import PartListCardImgOutstanding from 'com/part/list-card-img-outstanding.vue'
-
 import PartListcardChampion from 'com/part/list-card-champion.vue'
+
+import CellInputDel from 'com/cell/input-del.vue'
 
 export default {
   components: {
@@ -34,7 +38,8 @@ export default {
     PartListCardRecommend,
     CellRowTitle,
     PartListCardImgOutstanding,
-    PartListcardChampion
+    PartListcardChampion,
+    CellInputDel
   }
 }
 </script>
