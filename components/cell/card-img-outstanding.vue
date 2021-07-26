@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .card-item {
-  background: #eef3f7;
+  background: #fff;
   width: 100%;
   min-height: initial;
   border-radius: 15px;

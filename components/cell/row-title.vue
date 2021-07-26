@@ -2,7 +2,7 @@
   <div class="row-title">
     <div class="row-title__container">
       <a class="row-title__text">
-        <span>推荐列表</span>
+        <span>{{ title ? title : ''}}</span>
       </a>
       <a class="row-title__more">
         <span>更多>></span>
@@ -13,7 +13,12 @@
 
 <script>
 export default {
-
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 
@@ -24,7 +29,7 @@ export default {
 }
 
 .row-title__container {
-  border-bottom: 3px solid #10161a1a;
+  border-bottom: 1px solid #10161a1a;
   font-size: 2em;
   transition: all 0.25s linear;
   position: relative;

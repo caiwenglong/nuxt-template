@@ -42,7 +42,7 @@ export default {
       // loop: this.options.loop !== false,
       loop: false,
       // autoplay: this.options.autoplay !== false,
-      autoplay: true,
+      autoplay: false,
       animationData: this.options.animationData.default,
       rendererSettings: this.options.rendererSettings
     })

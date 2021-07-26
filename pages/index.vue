@@ -4,12 +4,16 @@
       <PartBanner></PartBanner>
       <PartListCardFeature></PartListCardFeature>
     </div>
-    <div class="page-row product-recommend">
-      <CellRowTitle></CellRowTitle>
-      <PartListCardRecommend></PartListCardRecommend>
+    <div class="page-row">
+      <CellRowTitle title="冠军榜"></CellRowTitle>
+      <PartListcardChampion></PartListcardChampion>
     </div>
     <div class="page-row">
       <PartListCardImgOutstanding></PartListCardImgOutstanding>
+    </div>
+    <div class="page-row product-recommend">
+      <CellRowTitle></CellRowTitle>
+      <PartListCardRecommend></PartListCardRecommend>
     </div>
   </div>
 </template>
@@ -21,13 +25,16 @@ import PartListCardRecommend from 'com/part/list-card-recommend.vue'
 import CellRowTitle from 'com/cell/row-title.vue'
 import PartListCardImgOutstanding from 'com/part/list-card-img-outstanding.vue'
 
+import PartListcardChampion from 'com/part/list-card-champion.vue'
+
 export default {
   components: {
     PartBanner,
     PartListCardFeature,
     PartListCardRecommend,
     CellRowTitle,
-    PartListCardImgOutstanding
+    PartListCardImgOutstanding,
+    PartListcardChampion
   }
 }
 </script>
@@ -40,12 +47,9 @@ export default {
 .page-home-banner {
   position: relative;
   min-height: 650px;
+  margin-bottom: 120px;
 }
 
-.product-recommend {
-  padding-top: 120px;
-  background-color: #f5f5f5;
-}
 .waves {
   position: relative;
   width: 100%;
