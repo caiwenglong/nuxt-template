@@ -35,17 +35,18 @@ export default {
   position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .row-title__container:before {
   content: '';
   display: block;
   width: 100%;
-  height: 3px;
+  height: 1px;
   background-color: #61a3ff;
   position: absolute;
   left: 0;
-  bottom: -3px; /* this is to match where the border is */
+  bottom: -1px; /* this is to match where the border is */
   transform-origin: left;
   transform: scale(0);
   transition: 0.25s linear;

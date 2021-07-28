@@ -4,19 +4,17 @@
       <PartBanner></PartBanner>
       <PartListCardFeature></PartListCardFeature>
     </div>
-    <div class="page-row">
+    <div class="page-row bg-white">
       <CellRowTitle title="冠军榜"></CellRowTitle>
       <PartListcardChampion></PartListcardChampion>
     </div>
-    <div class="page-row">
+    <div class="page-row  bg-white">
+      <CellRowTitle title="最新推荐"></CellRowTitle>
       <PartListCardImgOutstanding></PartListCardImgOutstanding>
     </div>
-    <div class="page-row product-recommend">
+    <div class="page-row product-recommend bg-white">
       <CellRowTitle></CellRowTitle>
       <PartListCardRecommend></PartListCardRecommend>
-    </div>
-    <div class="page-row">
-      <CellInputDel></CellInputDel>
     </div>
   </div>
 </template>
@@ -29,7 +27,7 @@ import CellRowTitle from 'com/cell/row-title.vue'
 import PartListCardImgOutstanding from 'com/part/list-card-img-outstanding.vue'
 import PartListcardChampion from 'com/part/list-card-champion.vue'
 
-import CellInputDel from 'com/cell/input-del.vue'
+
 
 export default {
   components: {
@@ -38,8 +36,7 @@ export default {
     PartListCardRecommend,
     CellRowTitle,
     PartListCardImgOutstanding,
-    PartListcardChampion,
-    CellInputDel
+    PartListcardChampion
   }
 }
 </script>
@@ -49,10 +46,18 @@ export default {
 .page-home {
   position: relative;
 }
+
+.bg-white {
+  background-color: $white;
+  border-radius: 4px;
+}
+
 .page-home-banner {
   position: relative;
   min-height: 650px;
-  margin-bottom: 120px;
+  & + .page-row {
+    padding-top: 100px;
+  }
 }
 
 .waves {
