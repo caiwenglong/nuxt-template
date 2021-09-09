@@ -4,7 +4,7 @@
       <div class="text">
         <input
           type="text"
-          placeholder="Your URL"
+          placeholder="请输入搜索内容"
         />
       </div>
       <button class="clear">

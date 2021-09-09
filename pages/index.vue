@@ -16,6 +16,9 @@
       <CellRowTitle></CellRowTitle>
       <PartListCardRecommend></PartListCardRecommend>
     </div>
+    <div class="page-row">
+      <PartLoginRegister></PartLoginRegister>
+    </div>
   </div>
 </template>
 
@@ -27,6 +30,7 @@ import CellRowTitle from 'com/cell/row-title.vue'
 import PartListCardImgOutstanding from 'com/part/list-card-img-outstanding.vue'
 import PartListcardChampion from 'com/part/list-card-champion.vue'
 
+import PartLoginRegister from 'com/part/login-register.vue'
 
 
 export default {
@@ -36,6 +40,7 @@ export default {
     PartListCardRecommend,
     CellRowTitle,
     PartListCardImgOutstanding,
+    PartLoginRegister,
     PartListcardChampion
   }
 }

@@ -4,9 +4,11 @@
       <a class="row-title__text">
         <span>{{ title ? title : ''}}</span>
       </a>
-      <a class="row-title__more">
-        <span>更多>></span>
-      </a>
+      <nuxt-link :to="'/articles/category'">
+        <a class="row-title__more">
+          <span>更多>></span>
+        </a>
+      </nuxt-link>
     </div>
   </div>
 </template>

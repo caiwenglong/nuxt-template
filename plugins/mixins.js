@@ -1,10 +1,11 @@
 // 全局方法
 
 import Vue from 'vue'
+const EventBus = new Vue()
 // let show = () => console.log('全局方法')
 
 // Vue.prototype.$show = show // 服务端钩子内部不可以使用  服务端this不会指向vue实例
-
+Vue.prototype.$EventBus = EventBus
 
 
 // // 全局锅过滤器
